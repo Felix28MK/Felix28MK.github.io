@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Opciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kMVqIRF8NFF7TJhFgz2lZbXsZrP7gqxa1t1gG3j8kqkP0tpGjwEvmAv3rZtdK0xXbHe9ASocHLEcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://plus.unsplash.com/premium_vector-1720817289929-95cdb727f013?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: translateY(-5px);
+        }
+
+        .button.education {
+            background-color: rgba(33, 150, 243, 0.8);
+        }
+
+        .button.education:hover {
+            background-color: rgba(30, 136, 229, 0.9);
+        }
+
+        .button.video {
+            background-color: rgba(76, 175, 80, 0.8);
+        }
+
+        .button.video:hover {
+            background-color: rgba(69, 160, 73, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <p>Elige a qué plataforma deseas ir:</p>
+
+    <div class="button-container">
+        <a href="Plataforma/login.php" class="button education">
+            <i class="fas fa-school"></i>
+            Plataforma Escolar
+        </a>
+        <a href="Videojuego/login.php" class="button video">
+            <i class="fas fa-gamepad"></i>
+            Videojuegos Educativos
+        </a>
+        <a href="mysql.php" class="button mysql">
+            <i class="fas fa-gamepad"></i>
+            Configurar el MySQL
+        </a>
+    </div>
+</body>
+</html>
