@@ -1,0 +1,196 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #eaf4ea; /* Fondo en verde claro y suave */
+    color: #333;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #2e7d32; /* Verde oscuro */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    background-color: #1b5e20; /* Verde aún más oscuro para hover */
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    color: #2e7d32; /* Verde oscuro para el título */
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Secciones del tablero */
+.dashboard-sections {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.dashboard-sections section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.dashboard-sections h2 {
+    color: #2e7d32; /* Verde oscuro para títulos */
+    margin-bottom: 1rem;
+}
+
+.dashboard-sections p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.dashboard-sections button {
+    padding: 0.7rem 1.5rem;
+    background-color: #2e7d32; /* Verde oscuro para botones */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-sections button:hover {
+    background-color: #1b5e20; /* Verde más oscuro para hover en botones */
+}
+
+/* Estilos para la interfaz de inicio del alumno */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #04771d;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Sección del tablero en tres columnas */
+.dashboard-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.dashboard-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: calc(33.33% - 20px); /* Tres columnas */
+    text-align: center;
+}
+
+.dashboard-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.dashboard-section button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.dashboard-section button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive: una columna en pantallas pequeñas */
+@media (max-width: 768px) {
+    .dashboard-section {
+        width: 100%;
+    }
+}

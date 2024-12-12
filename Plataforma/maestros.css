@@ -1,0 +1,193 @@
+
+
+
+/* Estilos generales : maestros.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f3;
+    color: #333;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    background-color: #388E3C;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Secciones del tablero */
+.dashboard-sections {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.dashboard-sections section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.dashboard-sections h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.dashboard-sections p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.dashboard-sections button {
+    padding: 0.7rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-sections button:hover {
+    background-color: #388E3C;
+}
+
+/* Estilos CSS para la lista desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4caf50;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para la sección de modificar datos */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-section img {
+    max-width: 100px; /* Limitar el tamaño de la imagen de perfil */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-bottom: 10px; /* Margen inferior para separación */
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #4caf50; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordes redondeados para botones */
+    cursor: pointer; /* Cursor de puntero para el botón */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo del botón al pasar el mouse */
+}
+

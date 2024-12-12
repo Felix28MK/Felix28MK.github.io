@@ -1,0 +1,431 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa; /* Fondo más claro */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+/* Títulos */
+h1 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 90px 10px 20px 10px;
+}
+
+h2 {
+    color: #255226;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    padding: 20px 10px 20px 10px;
+}
+
+/* Contenedores */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario de creación de preguntas */
+form#question-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para las preguntas */
+.question {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el label */
+form label {
+    font-weight: bold;
+    color: #4CAF50;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilos para inputs */
+form input[type="text"],
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botones */
+button {
+    background-color: #4caf50; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordes redondeados para botones */
+    cursor: pointer; /* Cursor de puntero para el botón */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo del botón al pasar el mouse */
+}
+
+/* Estilos para los botones de radio */
+form input[type="radio"] {
+    display: none; /* Ocultar el botón de radio original */
+}
+
+.custom-radio {
+    position: relative;
+    padding-left: 35px; /* Espacio para el botón de radio personalizado */
+    cursor: pointer;
+    user-select: none; /* Evitar selección de texto */
+}
+
+.custom-radio input {
+    position: absolute; /* Ocultar el botón de radio original */
+    opacity: 0; /* Hacer el botón de radio original invisible */
+    cursor: pointer; /* Mantener el cursor como puntero */
+}
+
+.custom-radio input:checked ~ .radio-circle {
+    background-color: #4CAF50; /* Color cuando está seleccionado */
+}
+
+.radio-circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid #4CAF50; /* Borde del botón de radio */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el texto de las opciones */
+.custom-radio span {
+    padding-left: 2px; /* Espacio entre el botón y el texto */
+    vertical-align: middle; /* Alinear el texto verticalmente */
+    font-size: 15px;
+}
+
+/* Tabla de preguntas */
+table#preguntas-tabla {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    font-weight: bold;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table tbody tr:active {
+    background-color: #e0f2f1;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #4CAF50; /* Color de fondo de la barra */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija la barra en la parte superior */
+    padding: 1rem 2rem;
+    width: 100vw; /* Abarca toda la pantalla */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.2s ease;
+}
+
+.navbar-menu li a:hover {
+    background-color: #388E3C;
+}
+
+/* Adaptabilidad para dispositivos móviles */
+@media (max-width: 600px) {
+    form#question-form, 
+    table#preguntas-tabla {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilos CSS para la lista desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4caf50;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo para la imagen de perfil en la barra de navegación */
+.profile-image {
+    width: 40px; /* Ancho de la imagen de perfil */
+    height: 40px; /* Alto de la imagen de perfil */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alinear la imagen verticalmente */
+}
+
+/* Estilos para la sección de modificar datos */
+.form-section {
+    width: 80%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Estilo para el menú desplegable */
+#examenesSelect {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 300px; /* Ancho del menú */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: border 0.3s ease; /* Transición suave para el borde */
+}
+
+#examenesSelect:focus {
+    border-color: #007BFF; /* Cambia el borde a azul al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Estilo para el menú desplegable de tipo de pregunta */
+#tipoPregunta {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 300px; /* Ancho del menú */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: border 0.3s ease; /* Transición suave para el borde */
+}
+
+#tipoPregunta:focus {
+    border-color: #007BFF; /* Cambia el borde a azul al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Estilo para la lista de preguntas */
+.pregunta-list {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los mensajes de error */
+.error-message {
+    color: red; /* Texto rojo para los errores */
+    font-size: 14px; /* Tamaño de fuente para el mensaje de error */
+}
+
+/* Estilo para el botón de eliminar */
+.btn-eliminar {
+    background-color: #f44336; /* Rojo para el botón de eliminar */
+}
+
+.btn-eliminar:hover {
+    background-color: #d32f2f; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+
+#tituloExamen {
+    text-align: center;
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 20px;
+}
+
+#cuestionario {
+    margin-top: 20px;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.pregunta p {
+    margin: 0;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+}
+
+
+
+
+/* Estilos para el contenedor de gráficos */
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los gráficos se envuelvan a la siguiente línea si es necesario */
+    justify-content: space-around; /* Espaciado alrededor de los elementos */
+    max-width: 800px; /* Establece un ancho máximo para la sección de gráficos */
+    margin: 0 auto; /* Centra el contenedor de gráficos */
+}
+
+/* Estilo para los elementos del gráfico */
+canvas {
+    margin: 10px; /* Espaciado entre los gráficos */
+    flex: 1 1 200px; /* Se adapta al tamaño del contenedor, con un mínimo de 200px de ancho */
+    max-width: 300px; /* Ancho máximo del gráfico para hacerlo más pequeño */
+    height: 200px; /* Establece una altura fija para los gráficos */
+    border-radius: 8px; /* Bordes redondeados para mayor estilo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    background-color: #fff; /* Fondo blanco para el área del gráfico */
+}
+
+#resultados {
+    display: flex; /* Esto asegurará que las tarjetas no empujen al botón */
+    flex-wrap: wrap; /* Asegúrate de que las tarjetas fluyan en filas */
+}
+
+/* Estilos comunes para inputs y botones */
+input[type="text"],
+input[type="submit"],
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo del botón al pasar el mouse */
+}
+
+input:focus, select:focus {
+    border-color: #007BFF; /* Cambia el borde a azul al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
